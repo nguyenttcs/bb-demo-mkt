@@ -440,15 +440,50 @@
             <p class="form-subtitle">Your business type helps us apply the right processing rate for your account.</p>
           </div>
 
-          <div class="business-options">
-            <button class="business-card selected" data-value="autoshop" type="button">
-              <span class="business-card__name">Autoshop</span>
-              <span class="business-card__rate">~3%</span>
+          <div class="form-fields">
+
+            <!-- Business Type dropdown trigger -->
+            <button class="biz-selector" id="biz-selector" type="button" aria-haspopup="listbox" aria-expanded="false">
+              <div class="biz-selector__content">
+                <span class="biz-selector__label">Business Type</span>
+                <span class="biz-selector__value" id="biz-display">Service (Nail, Barber)</span>
+              </div>
+              <svg class="biz-selector__chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 9L12 15L18 9" stroke="#21273D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
             </button>
-            <button class="business-card" data-value="others" type="button">
-              <span class="business-card__name">Others</span>
-              <span class="business-card__rate">~3.5%</span>
-            </button>
+
+            <!-- Business Type dropdown list -->
+            <div class="biz-dropdown hidden" id="biz-dropdown" role="listbox">
+              <button class="biz-option selected" data-fee="3.5" role="option" type="button">Service (Nail, Barber)</button>
+              <button class="biz-option" data-fee="3.0" role="option" type="button">Fast Food</button>
+              <button class="biz-option" data-fee="3.5" role="option" type="button">Restaurant</button>
+              <button class="biz-option" data-fee="3.0" role="option" type="button">Convenience</button>
+              <button class="biz-option" data-fee="3.5" role="option" type="button">Misc Retail</button>
+              <button class="biz-option" data-fee="3.0" role="option" type="button">Gift shop</button>
+              <button class="biz-option" data-fee="3.5" role="option" type="button">Pet shop</button>
+              <button class="biz-option" data-fee="3.0" role="option" type="button">Book store</button>
+              <button class="biz-option" data-fee="3.5" role="option" type="button">Toy / hobby</button>
+              <button class="biz-option" data-fee="3.0" role="option" type="button">Car wash</button>
+              <button class="biz-option" data-fee="3.5" role="option" type="button">Spa / Beauty</button>
+              <button class="biz-option" data-fee="3.0" role="option" type="button">Furniture / Home Furnishing</button>
+              <button class="biz-option" data-fee="3.5" role="option" type="button">Electronics</button>
+              <button class="biz-option" data-fee="3.0" role="option" type="button">Optometrist / Eye care</button>
+              <button class="biz-option" data-fee="3.5" role="option" type="button">Real estate / Rent</button>
+            </div>
+
+            <!-- Account Type & Fee (disabled / read-only) -->
+            <div class="info-field">
+              <span class="info-field__label">Account Type &amp; Fee</span>
+              <span class="info-field__value" id="biz-fee">Dual pricing 3.5%</span>
+            </div>
+
+            <!-- Equipment (disabled / read-only) -->
+            <div class="info-field">
+              <span class="info-field__label">Equipment</span>
+              <span class="info-field__value">Bamboo Go 2</span>
+            </div>
+
           </div>
         </div>
       </div>

@@ -35,7 +35,13 @@ const btnResendPhone = document.getElementById('btn-resend-phone');
 const btnNext6       = document.getElementById('btn-next-6');
 const btnGotoHome    = document.getElementById('btn-goto-home');
 const successIcon    = document.getElementById('success-icon');
-const businessCards  = document.querySelectorAll('.business-card');
+
+// Business type dropdown
+const bizSelector = document.getElementById('biz-selector');
+const bizDropdown = document.getElementById('biz-dropdown');
+const bizDisplay  = document.getElementById('biz-display');
+const bizFee      = document.getElementById('biz-fee');
+const bizOptions  = bizDropdown.querySelectorAll('.biz-option');
 
 // Country dropdown
 const countrySelector = document.getElementById('country-selector');
@@ -171,15 +177,48 @@ btnResendPhone.addEventListener('click', () => {
 });
 
 // =============================================
-// Screen 6 — Type of Business
+// Screen 6 — Business Type Dropdown
 // =============================================
 
-businessCards.forEach((card) => {
-  card.addEventListener('click', () => {
-    businessCards.forEach(c => c.classList.remove('selected'));
-    card.classList.add('selected');
+bizSelector.addEventListener('click', () => {
+  const isOpen = bizSelector.getAttribute('aria-expanded') === 'true';
+  if (isOpen) {
+    closeBizDropdown();
+  } else {
+    openBizDropdown();
+  }
+});
+
+bizOptions.forEach((option) => {
+  option.addEventListener('click', () => {
+    const label = option.textContent.trim();
+    const fee   = option.dataset.fee;
+
+    bizDisplay.textContent = label;
+    bizFee.textContent = `Dual pricing ${fee}%`;
+
+    bizOptions.forEach(o => o.classList.remove('selected'));
+    option.classList.add('selected');
+
+    closeBizDropdown();
   });
 });
+
+document.addEventListener('click', (e) => {
+  if (!bizSelector.contains(e.target) && !bizDropdown.contains(e.target)) {
+    closeBizDropdown();
+  }
+});
+
+function openBizDropdown() {
+  bizDropdown.classList.remove('hidden');
+  bizSelector.setAttribute('aria-expanded', 'true');
+}
+
+function closeBizDropdown() {
+  bizDropdown.classList.add('hidden');
+  bizSelector.setAttribute('aria-expanded', 'false');
+}
 
 btnNext6.addEventListener('click', () => {
   screen6.classList.add('hidden');
@@ -205,9 +244,10 @@ btnGotoHome.addEventListener('click', () => {
   inputOtp.value = '';
   inputPhone.value = '';
   inputPhoneOtp.value = '';
-  businessCards.forEach((c, i) => {
-    c.classList.toggle('selected', i === 0);
-  });
+  // Reset business type to first option
+  bizDisplay.textContent = 'Service (Nail, Barber)';
+  bizFee.textContent = 'Dual pricing 3.5%';
+  bizOptions.forEach((o, i) => o.classList.toggle('selected', i === 0));
   screen7.classList.add('hidden');
   screen0.classList.remove('hidden');
 });
