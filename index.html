@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>BambooPay</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ==========================================
+       SCREEN 0 — Get Started
+       ========================================== -->
+  <div class="screen" id="screen-0">
+
+    <header class="header">
+      <div class="logo">
+        <img src="assets/logo.svg" alt="bamboopay" width="152" height="24" />
+      </div>
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Search">
+          <img src="assets/search.svg" alt="Search" width="20" height="20" />
+        </button>
+        <button class="icon-btn" aria-label="Menu">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="5" width="16" height="2" rx="1" fill="#21273D"/>
+            <rect x="2" y="9" width="16" height="2" rx="1" fill="#21273D"/>
+            <rect x="2" y="13" width="16" height="2" rx="1" fill="#21273D"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="top-section">
+        <div class="get-started-intro">
+          <h1 class="get-started-title">Get Started</h1>
+          <p class="get-started-subtitle">Share a few business details so the team can match you with the best fit.</p>
+        </div>
+
+        <div class="step-list">
+          <div class="step-card">
+            <span class="step-label">Step 1</span>
+            <span class="step-name">Tell us about you</span>
+          </div>
+          <div class="step-card">
+            <span class="step-label">Step 2</span>
+            <span class="step-name">Confirm your email &amp; phone number</span>
+          </div>
+          <div class="step-card">
+            <span class="step-label">Step 3</span>
+            <span class="step-name">Confirm your business type & Submit for follow-up</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-section">
+        <button class="btn-next" id="btn-get-started" type="button">Get Started</button>
+        <p class="get-started-price">Only <strong>$24.99</strong> Monthly</p>
+      </div>
+    </main>
+
+  </div>
+
+  <!-- ==========================================
+       SCREEN 1 — Tell us about you
+       ========================================== -->
+  <div class="screen hidden" id="screen-1">
+
+    <header class="header">
+      <div class="logo">
+        <img src="assets/logo.svg" alt="bamboopay" width="152" height="24" />
+      </div>
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Search">
+          <img src="assets/search.svg" alt="Search" width="20" height="20" />
+        </button>
+        <button class="icon-btn" aria-label="Menu">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="5" width="16" height="2" rx="1" fill="#21273D"/>
+            <rect x="2" y="9" width="16" height="2" rx="1" fill="#21273D"/>
+            <rect x="2" y="13" width="16" height="2" rx="1" fill="#21273D"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="top-section">
+        <div class="progress-bar">
+          <div class="progress-step active"></div>
+          <div class="progress-step"></div>
+          <div class="progress-step"></div>
+        </div>
+
+        <div class="form-section">
+          <h1 class="form-title">Tell us about you</h1>
+          <div class="form-fields">
+            <input
+              id="input-name"
+              class="text-input"
+              type="text"
+              placeholder="Your name"
+              inputmode="text"
+              autocomplete="name"
+              enterkeyhint="next"
+            />
+            <input
+              id="input-business"
+              class="text-input"
+              type="text"
+              placeholder="Business name"
+              inputmode="text"
+              autocomplete="organization"
+              enterkeyhint="next"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-section">
+        <button class="btn-next" id="btn-next-1">Next</button>
+        <p class="powered-by">Powered by Fastboy Payments</p>
+      </div>
+    </main>
+
+  </div>
+
+  <!-- ==========================================
+       SCREEN 2 — Enter your email
+       ========================================== -->
+  <div class="screen hidden" id="screen-2">
+
+    <header class="header">
+      <div class="logo">
+        <img src="assets/logo.svg" alt="bamboopay" width="152" height="24" />
+      </div>
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Search">
+          <img src="assets/search.svg" alt="Search" width="20" height="20" />
+        </button>
+        <button class="icon-btn" aria-label="Menu">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="5" width="16" height="2" rx="1" fill="#21273D"/>
+            <rect x="2" y="9" width="16" height="2" rx="1" fill="#21273D"/>
+            <rect x="2" y="13" width="16" height="2" rx="1" fill="#21273D"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="top-section">
+        <div class="progress-bar">
+          <div class="progress-step active"></div>
+          <div class="progress-step active"></div>
+          <div class="progress-step"></div>
+        </div>
+
+        <div class="form-section">
+          <div class="form-title-group">
+            <h1 class="form-title">Enter your email</h1>
+            <p class="form-subtitle">For account notifications and support.</p>
+          </div>
+          <div class="form-fields">
+            <input
+              id="input-email"
+              class="text-input"
+              type="email"
+              placeholder="Email address"
+              inputmode="email"
+              autocomplete="email"
+              enterkeyhint="done"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-section">
+        <button class="btn-next" id="btn-next-2">Next</button>
+        <p class="powered-by">Powered by Fastboy Payments</p>
+      </div>
+    </main>
+
+  </div>
+
+  <!-- ==========================================
+       SCREEN 3 — Verify email
+       ========================================== -->
+  <div class="screen hidden" id="screen-3">
+
+    <header class="header">
+      <div class="logo">
+        <img src="assets/logo.svg" alt="bamboopay" width="152" height="24" />
+      </div>
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Search">
+          <img src="assets/search.svg" alt="Search" width="20" height="20" />
+        </button>
+        <button class="icon-btn" aria-label="Menu">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="5" width="16" height="2" rx="1" fill="#21273D"/>
+            <rect x="2" y="9" width="16" height="2" rx="1" fill="#21273D"/>
+            <rect x="2" y="13" width="16" height="2" rx="1" fill="#21273D"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="top-section">
+        <div class="progress-bar">
+          <div class="progress-step active"></div>
+          <div class="progress-step active"></div>
+          <div class="progress-step"></div>
+        </div>
+
+        <div class="form-section">
+          <div class="form-title-group">
+            <h1 class="form-title">Verify email</h1>
+            <p class="form-subtitle">
+              We've sent a verification code to <span id="display-email"></span>. Please enter the code below to continue.
+              <button class="btn-resend" id="btn-resend" type="button">Resend code</button>
+            </p>
+          </div>
+          <div class="form-fields">
+            <input
+              id="input-otp"
+              class="text-input"
+              type="text"
+              inputmode="numeric"
+              pattern="[0-9]*"
+              maxlength="6"
+              placeholder="______"
+              autocomplete="one-time-code"
+              enterkeyhint="done"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-section">
+        <div class="btn-row">
+          <button class="btn-back" id="btn-back-3" type="button">Back</button>
+          <button class="btn-next btn-next--flex" id="btn-next-3" type="button">Next</button>
+        </div>
+        <p class="powered-by">Powered by Fastboy Payments</p>
+      </div>
+    </main>
+
+  </div>
+
+  <!-- ==========================================
+       SCREEN 4 — Enter phone number
+       ========================================== -->
+  <div class="screen hidden" id="screen-4">
+
+    <header class="header">
+      <div class="logo">
+        <img src="assets/logo.svg" alt="bamboopay" width="152" height="24" />
+      </div>
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Search">
+          <img src="assets/search.svg" alt="Search" width="20" height="20" />
+        </button>
+        <button class="icon-btn" aria-label="Menu">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="5" width="16" height="2" rx="1" fill="#21273D"/>
+            <rect x="2" y="9" width="16" height="2" rx="1" fill="#21273D"/>
+            <rect x="2" y="13" width="16" height="2" rx="1" fill="#21273D"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="top-section">
+        <div class="progress-bar">
+          <div class="progress-step active"></div>
+          <div class="progress-step active"></div>
+          <div class="progress-step active"></div>
+        </div>
+
+        <div class="form-section">
+          <div class="form-title-group">
+            <h1 class="form-title">Enter your phone number</h1>
+            <p class="form-subtitle">Used for verification and account security only.</p>
+          </div>
+
+          <div class="form-fields">
+            <!-- Country dropdown -->
+            <button class="country-selector" id="country-selector" type="button" aria-haspopup="listbox" aria-expanded="false">
+              <div class="country-selector__content">
+                <span class="country-selector__label">Country</span>
+                <span class="country-selector__value" id="country-display">United States <strong>+1</strong></span>
+              </div>
+              <svg class="country-selector__chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 9L12 15L18 9" stroke="#21273D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+
+            <!-- Country dropdown list -->
+            <div class="country-dropdown hidden" id="country-dropdown" role="listbox">
+              <button class="country-option" data-code="+1" data-label="United States" role="option" type="button">
+                <span class="country-option__name">United States</span>
+                <span class="country-option__code">+1</span>
+              </button>
+              <button class="country-option" data-code="+84" data-label="Vietnam" role="option" type="button">
+                <span class="country-option__name">Vietnam</span>
+                <span class="country-option__code">+84</span>
+              </button>
+            </div>
+
+            <!-- Phone input -->
+            <input
+              id="input-phone"
+              class="text-input"
+              type="tel"
+              inputmode="numeric"
+              pattern="[0-9]*"
+              placeholder="Phone number"
+              autocomplete="tel-national"
+              enterkeyhint="done"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-section">
+        <button class="btn-next" id="btn-send-code" type="button">Send Code</button>
+        <p class="powered-by">Powered by Fastboy Payments</p>
+      </div>
+    </main>
+
+  </div>
+
+  <!-- ==========================================
+       SCREEN 5 — Verify mobile phone number
+       ========================================== -->
+  <div class="screen hidden" id="screen-5">
+
+    <header class="header">
+      <div class="logo">
+        <img src="assets/logo.svg" alt="bamboopay" width="152" height="24" />
+      </div>
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Search">
+          <img src="assets/search.svg" alt="Search" width="20" height="20" />
+        </button>
+        <button class="icon-btn" aria-label="Menu">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="5" width="16" height="2" rx="1" fill="#21273D"/>
+            <rect x="2" y="9" width="16" height="2" rx="1" fill="#21273D"/>
+            <rect x="2" y="13" width="16" height="2" rx="1" fill="#21273D"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="top-section">
+        <div class="progress-bar">
+          <div class="progress-step active"></div>
+          <div class="progress-step active"></div>
+          <div class="progress-step active"></div>
+        </div>
+
+        <div class="form-section">
+          <div class="form-title-group">
+            <h1 class="form-title">Verify mobile phone number</h1>
+            <p class="form-subtitle">
+              We've sent a verification code to <span id="display-phone"></span>. Please enter the code below to continue.
+              <button class="btn-resend" id="btn-resend-phone" type="button">Resend code</button>
+            </p>
+          </div>
+          <div class="form-fields">
+            <input
+              id="input-phone-otp"
+              class="text-input"
+              type="text"
+              inputmode="numeric"
+              pattern="[0-9]*"
+              maxlength="6"
+              placeholder="______"
+              autocomplete="one-time-code"
+              enterkeyhint="done"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-section">
+        <div class="btn-row">
+          <button class="btn-back" id="btn-back-5" type="button">Back</button>
+          <button class="btn-next btn-next--flex" id="btn-next-5" type="button">Next</button>
+        </div>
+        <p class="powered-by">Powered by Fastboy Payments</p>
+      </div>
+    </main>
+
+  </div>
+
+  <!-- ==========================================
+       SCREEN 6 — Type of Business
+       ========================================== -->
+  <div class="screen hidden" id="screen-6">
+
+    <header class="header">
+      <div class="logo">
+        <img src="assets/logo.svg" alt="bamboopay" width="152" height="24" />
+      </div>
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Search">
+          <img src="assets/search.svg" alt="Search" width="20" height="20" />
+        </button>
+        <button class="icon-btn" aria-label="Menu">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="5" width="16" height="2" rx="1" fill="#21273D"/>
+            <rect x="2" y="9" width="16" height="2" rx="1" fill="#21273D"/>
+            <rect x="2" y="13" width="16" height="2" rx="1" fill="#21273D"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="top-section">
+        <div class="progress-bar">
+          <div class="progress-step active"></div>
+          <div class="progress-step active"></div>
+          <div class="progress-step active"></div>
+        </div>
+
+        <div class="form-section">
+          <div class="form-title-group">
+            <h1 class="form-title">Type of Business</h1>
+            <p class="form-subtitle">Your business type helps us apply the right processing rate for your account.</p>
+          </div>
+
+          <div class="business-options">
+            <button class="business-card selected" data-value="autoshop" type="button">
+              <span class="business-card__name">Autoshop</span>
+              <span class="business-card__rate">~3%</span>
+            </button>
+            <button class="business-card" data-value="others" type="button">
+              <span class="business-card__name">Others</span>
+              <span class="business-card__rate">~3.5%</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-section">
+        <button class="btn-next" id="btn-next-6" type="button">Next</button>
+        <p class="powered-by">Powered by Fastboy Payments</p>
+      </div>
+    </main>
+
+  </div>
+
+  <!-- ==========================================
+       SCREEN 7 — Success
+       ========================================== -->
+  <div class="screen hidden" id="screen-7">
+    <div class="success-wrapper">
+      <div class="success-content">
+        <div class="success-icon" id="success-icon">
+          <img src="assets/success-icon.svg" alt="Success" width="64" height="64" />
+        </div>
+        <div class="success-text">
+          <h1 class="form-title" style="text-align:center">You're all set!</h1>
+          <p class="form-subtitle" style="text-align:center">Please wait while our system sends an email to help you continue with the next steps.</p>
+        </div>
+      </div>
+      <button class="btn-goto-home" id="btn-goto-home" type="button">Got it! Go to Home</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
